@@ -5,24 +5,11 @@
     </div>
     <div class="items">
       <ul class="row">
-        <li class="col">
+        <li v-for="(item, index) in menu" :key="index" class="col">
           <div class="item">
-            <a href="#">
-              <h5>Item</h5>
-            </a>
-          </div>
-        </li>
-        <li class="col">
-          <div class="item">
-            <a href="#">
-              <h5>Item</h5>
-            </a>
-          </div>
-        </li>
-        <li class="col">
-          <div class="item">
-            <a href="#">
-              <h5>Item</h5>
+            <a :href="item.src" :class="{ active: item.active }">
+              <h5>{{ item.label }}</h5>
+              <i v-if="item.dropdown" class="fas fa-caret-down"></i>
             </a>
           </div>
         </li>
@@ -37,10 +24,12 @@
 <script>
 export default {
   name: "Navbar",
+  props: ["menu"],
 };
 </script>
 
 <style scoped lang="scss">
+@import "../../scss/colors";
 @import "../../scss/mixin";
 nav {
   display: flex;
@@ -60,6 +49,20 @@ nav {
 
       .col {
         padding: 0 0.5em;
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: $color-white;
+          font-size: 1.1em;
+          i {
+            padding: 0 0.4em;
+            font-size: 0.8em;
+          }
+          &.active {
+            color: $color-yellow;
+          }
+        }
       }
     }
   }
