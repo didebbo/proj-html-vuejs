@@ -43,7 +43,7 @@ export default {
 @import "../../scss/colors";
 
 footer {
-  padding: 5em;
+  padding: 5em 0;
   background-color: $edu-color-red;
   color: $edu-color-white;
   .container {
