@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
+import Header from "./components/sections/Header.vue";
+import Footer from "./components/sections/Footer.vue";
 
 export default {
   name: "App",
@@ -25,4 +25,5 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~bootstrap/scss/bootstrap";
 </style>
