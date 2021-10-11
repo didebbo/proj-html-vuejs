@@ -1,15 +1,21 @@
 <template>
   <header>
-    <Navbar :menu="menu" />
+    <div class="cover"></div>
+    <div class="on-cover">
+      <Navbar :menu="menu" />
+      <Hero />
+    </div>
   </header>
 </template>
 
 <script>
 import Navbar from "../modules/Navbar.vue";
+import Hero from "../modules/Hero.vue";
 export default {
   name: "Header",
   components: {
     Navbar,
+    Hero,
   },
   data() {
     return {
@@ -65,6 +71,25 @@ export default {
 <style scoped lang="scss">
 @import "../../scss/colors";
 header {
+  position: relative;
   background-color: $edu-color-red;
+  background-image: url("/images/theme_slider2_bg-1.jpg");
+  .cover {
+    position: absolute;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $edu-color-red;
+    opacity: 0.9;
+    z-index: 1;
+  }
+  .on-cover {
+    position: relative;
+    display: block;
+    z-index: 2;
+  }
 }
 </style>
