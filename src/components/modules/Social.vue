@@ -4,9 +4,7 @@
       <img src="/images/theme_eduprime_logo.png" alt="EduPrime Logo" />
     </div>
     <div class="description">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt itaque
-      consequuntur provident ipsa saepe aperiam molestiae neque aut iste
-      pariatur incidunt quia, officia quas doloribus impedit minus laudantium id
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit consectetur
       autem.
     </div>
   </div>
@@ -24,6 +22,11 @@ export default {
     img {
       height: 2em;
     }
+  }
+  .description {
+    font-size: 0.8em;
+    padding: 1em 0;
+    line-height: 1.5em;
   }
 }
 </style>

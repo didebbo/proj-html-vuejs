@@ -45,6 +45,7 @@ export default {
 footer {
   padding: 5em;
   background-color: $edu-color-red;
+  color: $edu-color-white;
   .container {
     .row {
       display: flex;

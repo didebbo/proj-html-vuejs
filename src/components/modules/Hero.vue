@@ -41,8 +41,8 @@ export default {
       width: 50%;
       font-size: 0.8em;
       font-weight: 500;
-      line-height: 2em;
       text-align: center;
+      line-height: 2em;
     }
     .actions {
       a {
