@@ -63,7 +63,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../../scss/colors";
 header {
-  background-color: red;
+  background-color: $edu-color-red;
 }
 </style>

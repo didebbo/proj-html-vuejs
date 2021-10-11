@@ -35,7 +35,6 @@ nav {
   display: flex;
   align-items: center;
   padding: 1em 1.5em;
-  // justify-content: space-between;
   .logo {
     img {
       height: 2.5em;
@@ -53,14 +52,14 @@ nav {
           display: flex;
           align-items: center;
           text-decoration: none;
-          color: $color-white;
+          color: $edu-color-white;
           font-size: 1.1em;
           i {
             padding: 0 0.4em;
             font-size: 0.8em;
           }
           &.active {
-            color: $color-yellow;
+            color: $edu-color-yellow;
           }
         }
       }

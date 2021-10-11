@@ -1,7 +1,7 @@
 // Button
 @import "colors";
 
-@mixin btn-yellow($bg-color: $color-yellow,$color: $color-white, $padding: 1em 2em) {
+@mixin btn-yellow($bg-color: $edu-color-yellow,$color: $edu-color-white, $padding: 1em 2em) {
     background-color: $bg-color;
     color: $color;
     padding: $padding;
