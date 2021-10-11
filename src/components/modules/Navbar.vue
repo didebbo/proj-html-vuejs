@@ -29,9 +29,7 @@
       </ul>
     </div>
     <div class="btn-courses">
-      <button>
-        <p>View courses</p>
-      </button>
+      <a href="#"> View Courses </a>
     </div>
   </nav>
 </template>
@@ -43,6 +41,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../../scss/mixin";
 nav {
   display: flex;
   align-items: center;
@@ -66,7 +65,10 @@ nav {
   }
   .btn-courses {
     margin-left: 1em;
-    buttn {
+    a {
+      @include btn-yellow;
+      text-transform: uppercase;
+      font-size: 0.9em;
     }
   }
 }
