@@ -74,6 +74,8 @@ header {
   position: relative;
   background-color: $edu-color-red;
   background-image: url("/images/theme_slider2_bg-1.jpg");
+  background-size: cover;
+  background-position: center;
   .cover {
     position: absolute;
     display: block;

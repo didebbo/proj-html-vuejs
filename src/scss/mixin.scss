@@ -2,6 +2,7 @@
 @import "colors";
 
 @mixin btn-yellow($bg-color: $edu-color-yellow,$color: $edu-color-white, $padding: 1em 2em) {
+    display: inline-block;
     background-color: $bg-color;
     color: $color;
     padding: $padding;
