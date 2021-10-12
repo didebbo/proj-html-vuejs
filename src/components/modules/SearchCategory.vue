@@ -3,7 +3,7 @@
     <div class="searchBar">
       <form action="#">
         <input type="text" placeholder="Search..." />
-        <button type="submit">
+        <button type="submit" @click.prevent>
           <i class="fas fa-search"></i>
         </button>
       </form>
