@@ -3,15 +3,12 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <TwContent />
+          <TwContent v-if="data.imageToRight" />
+          <TwBanner v-else />
         </div>
         <div class="col">
-          <div class="banner">
-            <img
-              src="images/Graduation-Illustration.png"
-              alt="Graduation-Illustration"
-            />
-          </div>
+          <TwContent v-if="!data.imageToRight" />
+          <TwBanner v-else />
         </div>
       </div>
     </div>
@@ -20,12 +17,14 @@
 
 <script>
 import TwContent from "./TwContent.vue";
+import TwBanner from "./TwBanner.vue";
 
 export default {
   name: "TwoColumns",
   props: ["data"],
   components: {
     TwContent,
+    TwBanner,
   },
 };
 </script>
@@ -42,16 +41,6 @@ export default {
         max-width: (100% / 2);
         // border: 0.2em solid red;
         padding: 0 2em;
-        > * {
-          //   border: 0.2em solid blue;
-        }
-        .banner {
-          img {
-            max-width: 100%;
-            height: 15em;
-            object-fit: contain;
-          }
-        }
       }
     }
   }

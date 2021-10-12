@@ -19,9 +19,18 @@ export default {
       coursesSection: {
         imageToRight: true,
         content: {
-          topIcon: "",
-          title: "Lorem ipsum dolor",
+          topIcon: "Books-icon.png",
+          title: `Lorem ipsum dolor`,
+          description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        molestiae itaque deserunt rem velit magni, animi inventore ad rerum,
+        repellat perferendis. Earum hic nam saepe nulla, fuga officia iste
+        laborum.`,
+          btn: {
+            label: `Browse all courses`,
+            href: `#`,
+          },
         },
+        banner: "Graduation-Illustration.png",
       },
     };
   },
