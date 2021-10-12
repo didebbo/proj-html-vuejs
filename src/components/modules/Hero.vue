@@ -40,7 +40,6 @@ export default {
       padding: 2em 0;
       width: 50%;
       font-size: 0.8em;
-      font-weight: 500;
       text-align: center;
       line-height: 2em;
     }

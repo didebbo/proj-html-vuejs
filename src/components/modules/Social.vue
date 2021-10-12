@@ -35,12 +35,12 @@ export default {
 .social {
   .logo {
     img {
-      height: 2em;
+      height: 2.5em;
     }
   }
   .description {
     font-size: 0.8em;
-    padding: 1em 0;
+    padding: 1.5em 0;
     line-height: 1.5em;
   }
   .social-icons {

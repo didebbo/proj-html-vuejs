@@ -6,10 +6,7 @@
           <Social :socials="socials" />
         </div>
         <div class="col">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-          itaque nam, assumenda tenetur beatae ea ad quam natus voluptatum
-          consequuntur blanditiis quas enim omnis ex maiores officiis sapiente
-          reprehenderit tempore.
+          <VerticalMenu :menu="menu_getEduPrime" />
         </div>
         <div class="col">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
@@ -30,11 +27,13 @@
 
 <script>
 import Social from "../modules/Social.vue";
+import VerticalMenu from "../modules/VerticalMenu.vue";
 
 export default {
   name: "Footer",
   components: {
     Social,
+    VerticalMenu,
   },
   data() {
     return {
@@ -55,6 +54,35 @@ export default {
           href: "#",
         },
       ],
+      menu_getEduPrime: {
+        title: "Get EduPrime",
+        links: [
+          {
+            label: "Request a website",
+            href: "#",
+          },
+          {
+            label: "Browse Themes",
+            href: "#",
+          },
+          {
+            label: "Payment options",
+            href: "#",
+          },
+          {
+            label: "Support System",
+            href: "#",
+          },
+          {
+            label: "Checkout",
+            href: "#",
+          },
+          {
+            label: "Purchase Theme",
+            href: "#",
+          },
+        ],
+      },
     };
   },
 };
@@ -74,6 +102,8 @@ footer {
       > .col {
         width: (100% / 4);
         padding: 0 1em;
+        display: flex;
+        justify-content: center;
       }
     }
   }
