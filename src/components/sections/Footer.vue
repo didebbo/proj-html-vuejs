@@ -147,7 +147,7 @@ export default {
 @import "../../scss/colors";
 
 footer {
-  padding: 5em 0;
+  padding: 3em 0;
   background-color: $edu-color-red;
   color: $edu-color-white;
   .container {
@@ -160,13 +160,15 @@ footer {
         display: flex;
         justify-content: center;
         // border: 0.1em solid blue;
-        &.social,
-        &.category {
+        &.social {
           width: 30%;
         }
         &.menu {
-          width: 15%;
+          width: 20%;
           padding: 0 1.5em;
+        }
+        &.category {
+          width: 30%;
         }
         > * {
           // border: 0.1em solid green;

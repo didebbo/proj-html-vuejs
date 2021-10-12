@@ -22,6 +22,9 @@
         </li>
       </ul>
     </div>
+    <div class="copyright">
+      <span>ModelTheme. All Right Reserved.</span>
+    </div>
   </div>
 </template>
 
@@ -36,11 +39,14 @@ export default {
 @import "../../scss/colors";
 
 .searchCategory {
+  display: flex;
+  flex-direction: column;
   .searchBar {
     form {
       position: relative;
       display: flex;
       input {
+        width: 100%;
         height: 4em;
         padding: 0 1em;
         border: 0;
@@ -60,19 +66,17 @@ export default {
     }
   }
   .categories {
-    border: 0.1em solid red;
+    // border: 0.1em solid red;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    > * {
-      border: 0.1em solid green;
-    }
     padding: 2em 0;
     .row {
-      border: 0.1em solid blue;
+      //   border: 0.1em solid blue;
       display: flex;
       flex-wrap: wrap;
       list-style: none;
+      justify-content: flex-end;
       padding: 1em 0;
       .col {
         padding: 0.2em;
@@ -89,6 +93,12 @@ export default {
         }
       }
     }
+  }
+  .copyright {
+    align-self: flex-end;
+    color: $edu-color-yellow;
+    font-size: 0.8em;
+    // font-weight: 600;
   }
 }
 </style>
