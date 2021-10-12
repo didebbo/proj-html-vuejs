@@ -126,11 +126,9 @@ footer {
   .container {
     .row {
       display: flex;
-      // flex-wrap: wrap;
-      // border: 0.1em solid red;
+      flex-wrap: wrap;
       justify-content: center;
       > .col {
-        // border: 0.1em solid green;
         max-width: (100% / 4);
         padding: 0 1em;
         display: flex;
