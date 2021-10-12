@@ -9,16 +9,15 @@
           <VerticalMenu :menu="menu_getEduPrime" />
         </div>
         <div class="col">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-          itaque nam, assumenda tenetur beatae ea ad quam natus voluptatum
-          consequuntur blanditiis quas enim omnis ex maiores officiis sapiente
-          reprehenderit tempore.
+          <VerticalMenu :menu="menu_networking" />
         </div>
         <div class="col">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-          itaque nam, assumenda tenetur beatae ea ad quam natus voluptatum
-          consequuntur blanditiis quas enim omnis ex maiores officiis sapiente
-          reprehenderit tempore.
+          <div class="item">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores ea
+            odit corrupti quis magnam culpa quaerat nemo hic asperiores fugit
+            ad, debitis rem ducimus sint laboriosam voluptatem suscipit earum
+            cupiditate?
+          </div>
         </div>
       </div>
     </div>
@@ -83,6 +82,35 @@ export default {
           },
         ],
       },
+      menu_networking: {
+        title: "Networking",
+        links: [
+          {
+            label: "Purchase Theme",
+            href: "#",
+          },
+          {
+            label: "Our Benefits",
+            href: "#",
+          },
+          {
+            label: "Our Theam",
+            href: "#",
+          },
+          {
+            label: "Our Services",
+            href: "#",
+          },
+          {
+            label: "Other Products",
+            href: "#",
+          },
+          {
+            label: "My Account",
+            href: "#",
+          },
+        ],
+      },
     };
   },
 };
@@ -98,12 +126,14 @@ footer {
   .container {
     .row {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
+      // border: 0.1em solid red;
+      justify-content: center;
       > .col {
-        width: (100% / 4);
+        // border: 0.1em solid green;
+        max-width: (100% / 4);
         padding: 0 1em;
         display: flex;
-        justify-content: center;
       }
     }
   }
