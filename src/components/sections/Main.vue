@@ -3,16 +3,21 @@
     <section class="courses">
       <TwoColumns :data="coursesSection" />
     </section>
+    <section class="faculties">
+      <Faculties />
+    </section>
   </main>
 </template>
 
 <script>
 import TwoColumns from "../modules/TwoColumns.vue";
+import Faculties from "../modules/Faculties.vue";
 
 export default {
   name: "Main",
   components: {
     TwoColumns,
+    Faculties,
   },
   data() {
     return {
@@ -39,7 +44,8 @@ export default {
 
 <style scoped lang="scss">
 @import "../../scss/colors";
-.courses {
+.courses,
+.faculties {
   background-color: $edu-color-white;
 }
 </style>
