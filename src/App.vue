@@ -23,6 +23,7 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+@import "./scss/colors";
 @import "./scss/common";
 * {
   margin: 0;
@@ -32,5 +33,6 @@ export default {
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  background-color: $edu-color-red-opaque;
 }
 </style>
