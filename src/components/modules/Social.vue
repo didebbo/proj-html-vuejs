@@ -7,16 +7,31 @@
       Lorem ipsum dolor, sit amet consectetur adipisicing elit consectetur
       autem.
     </div>
+    <div class="social-icons">
+      <div class="row">
+        <div v-for="(social, index) in socials" :key="index" class="col">
+          <a :href="social.href">
+            <div class="icon">
+              <i :class="`${social.fa_prefix} ${social.fa_suffix}`"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- TODO Social -->
   </div>
 </template>
 
 <script>
 export default {
   name: "Social",
+  props: ["socials"],
 };
 </script>
 
 <style scoped lang="scss">
+@import "../../scss/colors";
+
 .social {
   .logo {
     img {
@@ -27,6 +42,33 @@ export default {
     font-size: 0.8em;
     padding: 1em 0;
     line-height: 1.5em;
+  }
+  .social-icons {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      .col {
+        padding: 0.3em;
+        a {
+          color: $edu-color-white;
+          text-decoration: none;
+          .icon {
+            position: relative;
+            border: 0.1em solid $edu-color-yellow;
+            border-radius: 50%;
+            width: 2.5em;
+            height: 2.5em;
+
+            i {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+    }
   }
 }
 </style>

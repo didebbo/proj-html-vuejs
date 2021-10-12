@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <Social />
+          <Social :socials="socials" />
         </div>
         <div class="col">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
@@ -35,6 +35,27 @@ export default {
   name: "Footer",
   components: {
     Social,
+  },
+  data() {
+    return {
+      socials: [
+        {
+          fa_prefix: "fab",
+          fa_suffix: "fa-facebook-f",
+          href: "#",
+        },
+        {
+          fa_prefix: "fab",
+          fa_suffix: "fa-twitter",
+          href: "#",
+        },
+        {
+          fa_prefix: "fab",
+          fa_suffix: "fa-instagram",
+          href: "#",
+        },
+      ],
+    };
   },
 };
 </script>
