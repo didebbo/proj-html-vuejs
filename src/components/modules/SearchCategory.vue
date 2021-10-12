@@ -8,6 +8,20 @@
         </button>
       </form>
     </div>
+    <div class="categories">
+      <div class="title">
+        <h4>Search Categories</h4>
+      </div>
+      <ul class="row">
+        <li v-for="(categorie, index) in categories" :key="index" class="col">
+          <div class="categorie">
+            <a :href="categorie.href">
+              {{ categorie.label }}
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -23,8 +37,6 @@ export default {
 
 .searchCategory {
   .searchBar {
-    // margin: 0 1em;
-
     form {
       position: relative;
       display: flex;
@@ -44,6 +56,37 @@ export default {
         right: 0;
         background-color: $edu-color-yellow;
         color: $edu-color-white;
+      }
+    }
+  }
+  .categories {
+    border: 0.1em solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    > * {
+      border: 0.1em solid green;
+    }
+    padding: 2em 0;
+    .row {
+      border: 0.1em solid blue;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 1em 0;
+      .col {
+        padding: 0.2em;
+        .categorie {
+          border: 0.1em solid $edu-color-white;
+          border-radius: 2em;
+          padding: 0.8em 1.6em;
+          font-size: 0.6em;
+          text-transform: uppercase;
+          a {
+            color: $edu-color-white;
+            text-decoration: none;
+          }
+        }
       }
     }
   }

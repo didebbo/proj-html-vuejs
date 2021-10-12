@@ -2,17 +2,17 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col social">
           <Social :socials="socials" />
         </div>
-        <div class="col">
+        <div class="col menu">
           <VerticalMenu :menu="menu_getEduPrime" />
         </div>
-        <div class="col">
+        <div class="col menu">
           <VerticalMenu :menu="menu_networking" />
         </div>
-        <div class="col">
-          <SearchCategory />
+        <div class="col category">
+          <SearchCategory :categories="categories" />
         </div>
       </div>
     </div>
@@ -108,6 +108,36 @@ export default {
           },
         ],
       },
+      categories: [
+        {
+          label: "Economy",
+          href: "#",
+        },
+        {
+          label: "Design",
+          href: "#",
+        },
+        {
+          label: "Coaching",
+          href: "#",
+        },
+        {
+          label: "Business",
+          href: "#",
+        },
+        {
+          label: "Medicine",
+          href: "#",
+        },
+        {
+          label: "Law",
+          href: "#",
+        },
+        {
+          label: "Fitnes",
+          href: "#",
+        },
+      ],
     };
   },
 };
@@ -123,17 +153,20 @@ footer {
   .container {
     .row {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       justify-content: center;
       // border: 0.1em solid red;
       > .col {
-        max-width: (100% / 4);
-        padding: 0 1.5em;
         display: flex;
+        justify-content: center;
         // border: 0.1em solid blue;
-        &:last-child {
-          flex-grow: 1;
-          justify-content: flex-end;
+        &.social,
+        &.category {
+          width: 30%;
+        }
+        &.menu {
+          width: 15%;
+          padding: 0 1.5em;
         }
         > * {
           // border: 0.1em solid green;
