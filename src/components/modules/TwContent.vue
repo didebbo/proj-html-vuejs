@@ -5,20 +5,18 @@
     </div>
     <div class="title">
       <h2>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eaque
-        suscipit.
+        {{ content.title }}
       </h2>
     </div>
     <div class="description">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-        molestiae itaque deserunt rem velit magni, animi inventore ad rerum,
-        repellat perferendis. Earum hic nam saepe nulla, fuga officia iste
-        laborum.
+        {{ content.description }}
       </p>
     </div>
     <div class="btn">
-      <a href="#"> Lorem Ipsum </a>
+      <a :href="content.btn.href">
+        {{ content.btn.label }}
+      </a>
     </div>
   </div>
 </template>
@@ -26,6 +24,7 @@
 <script>
 export default {
   name: "TwContent",
+  props: ["content"],
 };
 </script>
 

@@ -20,7 +20,7 @@ export default {
         imageToRight: true,
         content: {
           topIcon: "Books-icon.png",
-          title: `Lorem ipsum dolor`,
+          title: `Thousands of courses for any type of student`,
           description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
         molestiae itaque deserunt rem velit magni, animi inventore ad rerum,
         repellat perferendis. Earum hic nam saepe nulla, fuga officia iste

@@ -1,15 +1,13 @@
 <template>
   <div class="banner">
-    <img
-      src="images/Graduation-Illustration.png"
-      alt="Graduation-Illustration"
-    />
+    <img :src="`images/${banner}`" :alt="`images/${banner}`" />
   </div>
 </template>
 
 <script>
 export default {
   name: "TwBanner",
+  props: ["banner"],
 };
 </script>
 

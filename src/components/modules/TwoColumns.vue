@@ -3,12 +3,12 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <TwContent v-if="data.imageToRight" />
-          <TwBanner v-else />
+          <TwContent v-if="data.imageToRight" :content="data.content" />
+          <TwBanner v-else :banner="data.banner" />
         </div>
         <div class="col">
-          <TwContent v-if="!data.imageToRight" />
-          <TwBanner v-else />
+          <TwContent v-if="!data.imageToRight" :content="data.content" />
+          <TwBanner v-else :banner="data.banner" />
         </div>
       </div>
     </div>
