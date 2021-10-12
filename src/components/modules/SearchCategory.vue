@@ -87,7 +87,7 @@ export default {
           text-transform: uppercase;
           a {
             display: inline-block;
-            padding: 0.8em 1.6em;
+            padding: 0.6em 1.2em;
             color: $edu-color-white;
             text-decoration: none;
           }

@@ -41,7 +41,6 @@ export default {
   .description {
     font-size: 0.8em;
     padding: 1.5em 0;
-    line-height: 1.5em;
   }
   .social-icons {
     .row {

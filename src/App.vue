@@ -30,6 +30,15 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+  line-height: 1.2em;
+}
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;

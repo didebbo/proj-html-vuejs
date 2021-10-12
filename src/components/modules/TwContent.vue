@@ -33,9 +33,14 @@ export default {
 @import "../../scss/mixin";
 .content {
   .top-icon {
+    padding: 0.5em 0;
     img {
       height: 2em;
     }
+  }
+  .description {
+    font-size: 0.8em;
+    padding: 2em 0;
   }
   .btn {
     a {

@@ -34,14 +34,17 @@ export default {
 .two-columns {
   .container {
     .row {
-      border: 0.2em solid green;
+      //   border: 0.2em solid green;
       display: flex;
       justify-content: center;
+      padding: 2em 0;
       > .col {
         max-width: (100% / 2);
-        border: 0.2em solid red;
-        padding: 0 1em;
-
+        // border: 0.2em solid red;
+        padding: 0 2em;
+        > * {
+          //   border: 0.2em solid blue;
+        }
         .banner {
           img {
             max-width: 100%;
