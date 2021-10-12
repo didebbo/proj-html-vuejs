@@ -83,10 +83,11 @@ export default {
         .categorie {
           border: 0.1em solid $edu-color-white;
           border-radius: 2em;
-          padding: 0.8em 1.6em;
           font-size: 0.6em;
           text-transform: uppercase;
           a {
+            display: inline-block;
+            padding: 0.8em 1.6em;
             color: $edu-color-white;
             text-decoration: none;
           }
