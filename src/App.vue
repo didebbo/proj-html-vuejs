@@ -44,5 +44,6 @@ body {
   font-weight: 500;
   background-color: $edu-color-red-opaque;
   color: $edu-text-color;
+  cursor: default;
 }
 </style>

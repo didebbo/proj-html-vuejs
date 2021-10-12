@@ -48,7 +48,7 @@ export default {
       input {
         width: 100%;
         height: 4em;
-        padding: 0 1em;
+        padding: 0 4.5em 0 1em;
         border: 0;
         border-radius: 2em;
       }
@@ -62,6 +62,7 @@ export default {
         right: 0;
         background-color: $edu-color-yellow;
         color: $edu-color-white;
+        cursor: pointer;
       }
     }
   }
