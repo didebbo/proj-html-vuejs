@@ -12,12 +12,7 @@
           <VerticalMenu :menu="menu_networking" />
         </div>
         <div class="col">
-          <div class="item">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores ea
-            odit corrupti quis magnam culpa quaerat nemo hic asperiores fugit
-            ad, debitis rem ducimus sint laboriosam voluptatem suscipit earum
-            cupiditate?
-          </div>
+          <SearchCategory />
         </div>
       </div>
     </div>
@@ -27,12 +22,14 @@
 <script>
 import Social from "../modules/Social.vue";
 import VerticalMenu from "../modules/VerticalMenu.vue";
+import SearchCategory from "../modules/SearchCategory.vue";
 
 export default {
   name: "Footer",
   components: {
     Social,
     VerticalMenu,
+    SearchCategory,
   },
   data() {
     return {
@@ -128,10 +125,19 @@ footer {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      // border: 0.1em solid red;
       > .col {
         max-width: (100% / 4);
-        padding: 0 1em;
+        padding: 0 1.5em;
         display: flex;
+        // border: 0.1em solid blue;
+        &:last-child {
+          flex-grow: 1;
+          justify-content: flex-end;
+        }
+        > * {
+          // border: 0.1em solid green;
+        }
       }
     }
   }
