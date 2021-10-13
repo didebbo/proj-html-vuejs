@@ -48,7 +48,7 @@
           </div>
         </div>
         <div class="col">
-          <TwoColumns :data="facultieSection" class="two-columns" />
+          <TwoColumns :data="currentFacultieSection" />
         </div>
       </div>
     </div>
@@ -64,30 +64,75 @@ export default {
   },
   data() {
     return {
-      currentFacultie: 0,
+      currentFacultie: 1,
       menuFaculties: [
         {
           src: "Gavel-v2.png",
           title: "Low Faculty",
+          facultieSection: {
+            content: {
+              title: "Low Faculty",
+              btn: {
+                href: `#`,
+              },
+            },
+            banner: "Gavel-Illustration-e1556884768193.png",
+          },
         },
         {
           src: "Coins-tabs-v2.png",
           title: "Economy",
+          facultieSection: {
+            content: {
+              title: "Economy",
+              btn: {
+                href: `#`,
+              },
+            },
+            banner: "Economy.png",
+          },
         },
         {
           src: "Medicine-tabs-v2.png",
           title: "Medicine",
+          facultieSection: {
+            content: {
+              title: "Medicine",
+              btn: {
+                href: `#`,
+              },
+            },
+            banner: "Medicine.png",
+          },
         },
         {
           src: "Computer-tabs-v2.png",
           title: "Computer Science",
+          facultieSection: {
+            content: {
+              title: "Computer Science",
+              btn: {
+                href: `#`,
+              },
+            },
+            banner: "Computer-Science.png",
+          },
         },
         {
           src: "Palette-tabs-v2.png",
           title: "Graphic Design",
+          facultieSection: {
+            content: {
+              title: "Graphic Design",
+              btn: {
+                href: `#`,
+              },
+            },
+            banner: "Graphic-Design.png",
+          },
         },
       ],
-      facultieSection: {
+      currentFacultieSection: {
         imageToRight: false,
         content: {
           title: "",
@@ -101,17 +146,22 @@ export default {
             bgColor: "#e56768",
           },
         },
-        banner: "Graduation-Illustration.png",
+        banner: "",
       },
     };
   },
   methods: {
     setThisFacultie(index) {
       this.currentFacultie = index;
-      // return index;
     },
     isCurrentFacultie(index) {
-      if (index == this.currentFacultie) return "active";
+      if (index == this.currentFacultie) {
+        this.currentFacultieSection.content.title =
+          this.menuFaculties[index].facultieSection.content.title;
+        this.currentFacultieSection.banner =
+          this.menuFaculties[index].facultieSection.banner;
+        return "active";
+      }
     },
   },
 };
