@@ -14,7 +14,10 @@
       </p>
     </div>
     <div class="btn">
-      <a :href="content.btn.href">
+      <a
+        :href="content.btn.href"
+        :style="`background-color: ${content.btn.bgColor};`"
+      >
         {{ content.btn.label }}
       </a>
     </div>

@@ -18,13 +18,16 @@
         <div class="col">
           <div class="menu-cards">
             <ul class="row">
+              <li class="col">
+                <div class="card"></div>
+              </li>
               <li
                 v-for="(menuFacultie, index) in menuFaculties"
                 :key="index"
                 class="col"
                 @click="setThisFacultie(index)"
               >
-                <div class="card" :class="{ active: menuFacultie.active }">
+                <div class="card" :class="isCurrentFacultie(index)">
                   <div class="content">
                     <div class="image">
                       <img
@@ -33,16 +36,19 @@
                       />
                     </div>
                     <div class="title">
-                      <h6>menuFacultie.title</h6>
+                      <h6>{{ menuFacultie.title }}</h6>
                     </div>
                   </div>
                 </div>
+              </li>
+              <li class="col">
+                <div class="card"></div>
               </li>
             </ul>
           </div>
         </div>
         <div class="col">
-          <TwoColumns :data="coursesSection" />
+          <TwoColumns :data="facultieSection" class="two-columns" />
         </div>
       </div>
     </div>
@@ -58,35 +64,41 @@ export default {
   },
   data() {
     return {
+      currentFacultie: 0,
       menuFaculties: [
         {
           src: "Gavel-v2.png",
-          title: "Lorem Ipsum",
-          active: true,
+          title: "Low Faculty",
         },
         {
-          src: "Gavel-v2.png",
-          title: "Lorem Ipsum",
-          active: false,
+          src: "Coins-tabs-v2.png",
+          title: "Economy",
         },
         {
-          src: "Gavel-v2.png",
-          title: "Lorem Ipsum",
-          active: false,
+          src: "Medicine-tabs-v2.png",
+          title: "Medicine",
+        },
+        {
+          src: "Computer-tabs-v2.png",
+          title: "Computer Science",
+        },
+        {
+          src: "Palette-tabs-v2.png",
+          title: "Graphic Design",
         },
       ],
-      coursesSection: {
+      facultieSection: {
         imageToRight: false,
         content: {
-          topIcon: "Books-icon.png",
-          title: `Thousands of courses for any type of student`,
+          title: "",
           description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
         molestiae itaque deserunt rem velit magni, animi inventore ad rerum,
         repellat perferendis. Earum hic nam saepe nulla, fuga officia iste
         laborum.`,
           btn: {
-            label: `Browse all courses`,
+            label: `Read More`,
             href: `#`,
+            bgColor: "#e56768",
           },
         },
         banner: "Graduation-Illustration.png",
@@ -95,10 +107,11 @@ export default {
   },
   methods: {
     setThisFacultie(index) {
-      this.menuFaculties.forEach((menuFacultie, i) => {
-        if (index == i) menuFacultie.active = true;
-        else menuFacultie.active = false;
-      });
+      this.currentFacultie = index;
+      // return index;
+    },
+    isCurrentFacultie(index) {
+      if (index == this.currentFacultie) return "active";
     },
   },
 };
@@ -132,6 +145,7 @@ export default {
             // border: 0.2em solid red;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             list-style: none;
             li {
               // border: 0.2em solid green;
@@ -172,9 +186,6 @@ export default {
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  > * {
-                    // border: 0.2em solid blue;
-                  }
                   .image {
                     width: 50%;
                     height: 50%;
@@ -186,6 +197,7 @@ export default {
                   }
                   .title {
                     margin-top: 0.5em;
+                    color: $edu-color-red;
                   }
                 }
               }
