@@ -23,6 +23,9 @@
     <section class="subscribe">
       <Subscribe />
     </section>
+    <section class="partners">
+      <div class="separator"></div>
+    </section>
   </main>
 </template>
 
@@ -108,7 +111,8 @@ section {
 .courses,
 .faculties,
 .methods,
-.fees {
+.fees,
+.partners {
   background-color: $edu-color-white;
 }
 
@@ -123,7 +127,6 @@ main {
     padding-bottom: 0;
     overflow: hidden;
     .separator {
-      position: relative;
       position: relative;
       bottom: -5px;
       display: flex;
@@ -149,6 +152,23 @@ main {
       background-size: contain;
       background-repeat: repeat-x;
       background-position: top;
+    }
+  }
+  .partners {
+    position: relative;
+    padding-bottom: 0;
+    overflow: hidden;
+    .separator {
+      position: relative;
+      bottom: -5px;
+      display: flex;
+      width: 100vw;
+      height: 128px;
+      background-color: lightgray;
+      background-image: url("/images/background-wave3.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.2;
     }
   }
 }
