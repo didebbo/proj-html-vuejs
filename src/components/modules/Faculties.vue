@@ -1,41 +1,50 @@
 <template>
   <div class="faculties">
     <div class="container">
-      <div class="title">
-        <h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque
-          labore nihil perferendis aliquid temporibus asperiores.
-        </h2>
-      </div>
-      <div class="description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta animi,
-        provident omnis repellendus eum aliquid, excepturi quibusdam suscipit
-        dolorum ea dolorem? Eius nesciunt fuga eaque debitis aperiam dolorum vel
-        doloribus.
-      </div>
-      <div class="menu-cards">
-        <ul class="row">
-          <li class="col">
-            <div class="card">
-              <div class="image">
-                <img src="images/Gavel-v2.png" alt="Gavel-v2" />
-              </div>
-              <div class="title">
-                <h5>Lorem Ipsum</h5>
-              </div>
-            </div>
-          </li>
-          <li class="col">
-            <div class="card active">
-              <div class="image">
-                <img src="images/Gavel-v2.png" alt="Gavel-v2" />
-              </div>
-              <div class="title">
-                <h5>Lorem Ipsum</h5>
-              </div>
-            </div>
-          </li>
-        </ul>
+      <div class="row">
+        <div class="col">
+          <div class="title">
+            <h2>Faculties avaiable at EduPrime</h2>
+          </div>
+        </div>
+        <div class="col">
+          <div class="description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+            accusantium rerum nisi omnis deserunt! Sint inventore veniam qui sit
+            minima consequatur vero, modi dolore laborum at obcaecati in atque
+            ad.
+          </div>
+        </div>
+        <div class="col">
+          <div class="menu-cards">
+            <ul class="row">
+              <li class="col">
+                <div class="card">
+                  <div class="content">
+                    <div class="image">
+                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
+                    </div>
+                    <div class="title">
+                      <h6>Lorem Ipsum</h6>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col">
+                <div class="card active">
+                  <div class="content">
+                    <div class="image">
+                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
+                    </div>
+                    <div class="title">
+                      <h6>Lorem Ipsum</h6>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -52,30 +61,87 @@ export default {
 
 .faculties {
   .container {
-    .menu-cards {
-      .row {
-        //   border: 0.2em solid red;
+    > .row {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      // border: 0.2em solid red;
+
+      > .col {
+        // border: 0.2em solid green;
+        padding: 1em 0;
         display: flex;
-        list-style: none;
-        .col {
-          // border: 0.2em solid green;
-          .card {
-            //   border: 0.2em solid blue;
-            padding: 1em;
-            &.active {
-              background-color: $edu-color-red;
-              img {
-                filter: brightness(200%);
-              }
-              .title {
-                color: $edu-color-white;
-              }
-            }
-            .image {
-              img {
-                width: 5em;
-                height: 5em;
-                object-fit: contain;
+        justify-content: center;
+        > * {
+          // border: 0.2em solid blue;
+        }
+        .description {
+          text-align: center;
+          font-size: 0.8em;
+          max-width: 50%;
+        }
+        .menu-cards {
+          // border: 0.2em solid blue;
+          width: 100%;
+          ul {
+            // border: 0.2em solid red;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            li {
+              // border: 0.2em solid green;
+              width: (100% / 7);
+              .card {
+                position: relative;
+                // border: 0.2em solid orange;
+                box-shadow: 0 0.5em 1em lightgray;
+                width: 100%;
+                &::after {
+                  display: block;
+                  content: "";
+                  padding-top: 100%;
+                  // width: 0.1em;
+                  // background-color: red;
+                }
+                &.active {
+                  background-color: $edu-color-red;
+                  box-shadow: none;
+                  img {
+                    filter: brightness(200%);
+                  }
+                  .content {
+                    .title {
+                      color: $edu-color-white;
+                    }
+                  }
+                }
+                .content {
+                  position: absolute;
+                  // border: 0.2em solid yellow;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  > * {
+                    // border: 0.2em solid blue;
+                  }
+                  .image {
+                    width: 50%;
+                    height: 50%;
+                    img {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: contain;
+                    }
+                  }
+                  .title {
+                    margin-top: 0.5em;
+                  }
+                }
               }
             }
           }

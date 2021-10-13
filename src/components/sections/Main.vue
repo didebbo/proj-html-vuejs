@@ -44,6 +44,10 @@ export default {
 
 <style scoped lang="scss">
 @import "../../scss/colors";
+
+section {
+  padding: 2em 0;
+}
 .courses,
 .faculties {
   background-color: $edu-color-white;
