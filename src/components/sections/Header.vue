@@ -4,6 +4,7 @@
     <div class="on-cover">
       <Navbar :menu="menu" />
       <Hero />
+      <div class="separator"></div>
     </div>
   </header>
 </template>
@@ -92,6 +93,18 @@ header {
     position: relative;
     display: block;
     z-index: 2;
+    overflow: hidden;
+    .separator {
+      position: relative;
+      bottom: -5px;
+      display: flex;
+      width: 100vw;
+      height: 128px;
+      background-image: url("/images/Wave-1.png");
+      background-size: contain;
+      background-repeat: repeat-x;
+      background-position: bottom;
+    }
   }
 }
 </style>

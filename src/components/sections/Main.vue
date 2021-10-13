@@ -5,9 +5,7 @@
     </section>
     <section class="faculties">
       <Faculties />
-      <div class="separator">
-        <!-- <img src="images/svg-0.svg" alt="svg-0" /> -->
-      </div>
+      <div class="separator"></div>
     </section>
     <section class="univerisyYear">
       <UniverityYear />
@@ -16,6 +14,7 @@
       <UpcomingEvents />
     </section>
     <section class="methods">
+      <div class="separator"></div>
       <TwoColumns :data="methods" />
     </section>
     <section class="fees">
@@ -114,24 +113,42 @@ section {
 }
 
 main {
+  .courses {
+    background-image: url("/images/home-background.png");
+    background-size: cover;
+    background-position: top right;
+  }
   .faculties {
     position: relative;
     padding-bottom: 0;
     overflow: hidden;
     .separator {
       position: relative;
-      bottom: -0.1em;
+      position: relative;
+      bottom: -5px;
       display: flex;
       width: 100vw;
-      height: 8em;
+      height: 128px;
       background-image: url("/images/svg-0.svg");
-      background-size: cover;
-      // img {
-      //   width: 100%;
-      //   // height: 100%;
-      //   object-fit: contain;
-      //   obj-re
-      // }
+      background-size: contain;
+      background-repeat: repeat-x;
+      background-position: bottom;
+    }
+  }
+  .methods {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    .separator {
+      position: relative;
+      top: -5px;
+      display: flex;
+      width: 100vw;
+      height: 128px;
+      background-image: url("/images/svg-1.svg");
+      background-size: contain;
+      background-repeat: repeat-x;
+      background-position: top;
     }
   }
 }
