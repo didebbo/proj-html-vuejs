@@ -1,7 +1,7 @@
 <template>
   <main>
     <section class="courses">
-      <TwoColumns :data="coursesSection" />
+      <TwoColumns :data="courses" />
     </section>
     <section class="faculties">
       <Faculties />
@@ -11,6 +11,12 @@
     </section>
     <section class="upcomingEvents">
       <UpcomingEvents />
+    </section>
+    <section class="methods">
+      <TwoColumns :data="methods" />
+    </section>
+    <section class="fees">
+      <TwoColumns :data="fees" />
     </section>
     <section class="subscribe">
       <Subscribe />
@@ -36,7 +42,7 @@ export default {
   },
   data() {
     return {
-      coursesSection: {
+      courses: {
         imageToRight: true,
         content: {
           topIcon: "Books-icon.png",
@@ -52,6 +58,40 @@ export default {
         },
         banner: "Graduation-Illustration.png",
       },
+      methods: {
+        imageToRight: true,
+        content: {
+          topIcon: "Exam-icon.png",
+          title: `The most efficient examination method`,
+          description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        molestiae itaque deserunt rem velit magni, animi inventore ad rerum,
+        repellat perferendis. Earum hic nam saepe nulla, fuga officia iste
+        laborum.`,
+          btn: {
+            label: `Discover the Method`,
+            href: `#`,
+            bgColor: "#e56768",
+          },
+        },
+        banner: "Exam-Illustration.png",
+      },
+      fees: {
+        imageToRight: false,
+        content: {
+          topIcon: "Exam-icon-1.png",
+          title: `Variable fees for international students`,
+          description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        molestiae itaque deserunt rem velit magni, animi inventore ad rerum,
+        repellat perferendis. Earum hic nam saepe nulla, fuga officia iste
+        laborum.`,
+          btn: {
+            label: `List of Fees`,
+            href: `#`,
+            bgColor: "#e56768",
+          },
+        },
+        banner: "Exam-Illustration.png",
+      },
     };
   },
 };
@@ -64,7 +104,9 @@ section {
   padding: 2em 0;
 }
 .courses,
-.faculties {
+.faculties,
+.methods,
+.fees {
   background-color: $edu-color-white;
 }
 </style>
