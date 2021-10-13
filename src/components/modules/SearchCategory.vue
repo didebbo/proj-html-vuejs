@@ -1,13 +1,14 @@
 <template>
   <div class="searchCategory">
-    <div class="searchBar">
+    <SearchBar :data="searchBar" />
+    <!-- <div class="searchBar">
       <form action="#">
         <input type="text" placeholder="Search..." />
         <button type="submit" @click.prevent>
           <i class="fas fa-search"></i>
         </button>
       </form>
-    </div>
+    </div> -->
     <div class="categories">
       <div class="title">
         <h4>Search Categories</h4>
@@ -29,9 +30,23 @@
 </template>
 
 <script>
+import SearchBar from "./SearchBar.vue";
 export default {
   name: "SearchCategory",
   props: ["categories"],
+  components: {
+    SearchBar,
+  },
+  data() {
+    return {
+      searchBar: {
+        btnIcon: {
+          prefix: "fas",
+          suffix: "fa-search",
+        },
+      },
+    };
+  },
 };
 </script>
 
@@ -41,31 +56,31 @@ export default {
 .searchCategory {
   display: flex;
   flex-direction: column;
-  .searchBar {
-    form {
-      position: relative;
-      display: flex;
-      input {
-        width: 100%;
-        height: 4em;
-        padding: 0 4.5em 0 1em;
-        border: 0;
-        border-radius: 2em;
-      }
-      button {
-        position: absolute;
-        border: 0;
-        border-radius: 2em;
-        width: 4em;
-        height: 4em;
-        top: 0;
-        right: 0;
-        background-color: $edu-color-yellow;
-        color: $edu-color-white;
-        cursor: pointer;
-      }
-    }
-  }
+  // .searchBar {
+  //   form {
+  //     position: relative;
+  //     display: flex;
+  //     input {
+  //       width: 100%;
+  //       height: 4em;
+  //       padding: 0 4.5em 0 1em;
+  //       border: 0;
+  //       border-radius: 2em;
+  //     }
+  //     button {
+  //       position: absolute;
+  //       border: 0;
+  //       border-radius: 2em;
+  //       width: 4em;
+  //       height: 4em;
+  //       top: 0;
+  //       right: 0;
+  //       background-color: $edu-color-yellow;
+  //       color: $edu-color-white;
+  //       cursor: pointer;
+  //     }
+  //   }
+  // }
   .categories {
     // border: 0.1em solid red;
     display: flex;
