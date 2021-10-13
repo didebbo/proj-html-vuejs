@@ -64,7 +64,7 @@ export default {
   },
   data() {
     return {
-      currentFacultie: 1,
+      currentFacultie: 0,
       menuFaculties: [
         {
           src: "Gavel-v2.png",
