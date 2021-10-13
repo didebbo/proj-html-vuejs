@@ -9,4 +9,9 @@
     border-radius: 2em;
     font-weight: bold;
     text-decoration: none;
+    transition: 0.2s;
+    &:hover {
+      filter: brightness(1.1);
+      transform: scale(1.1);
+    }
   }
