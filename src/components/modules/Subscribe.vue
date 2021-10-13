@@ -28,7 +28,7 @@ export default {
       searchBar: {
         btnIcon: {
           prefix: "fas",
-          suffix: "fa-search",
+          suffix: "fa-paper-plane",
         },
       },
     };
