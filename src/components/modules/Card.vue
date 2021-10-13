@@ -21,6 +21,12 @@
           {{ data.description }}
         </div>
       </div>
+      <div class="btn">
+        <a :href="data.href">
+          <i class="fas fa-plus"></i>
+          <span> Find More </span>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -33,8 +39,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+// @import "../../scss/colors";
 @import "../../scss/mixin";
 .card {
+  position: relative;
   background-color: $edu-color-white;
   color: $edu-text-color;
   padding: 2em;
@@ -58,6 +66,17 @@ export default {
       .description {
         font-size: 0.6em;
         line-height: 1.5em;
+      }
+    }
+    .btn {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      font-size: 0.6em;
+      a {
+        @include btn-yellow($edu-color-red);
+        box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.1);
       }
     }
   }

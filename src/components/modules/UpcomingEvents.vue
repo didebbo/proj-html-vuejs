@@ -20,12 +20,13 @@
             <div class="row">
               <div v-for="(event, index) in events" :key="index" class="col">
                 <Card :data="event" />
-                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                magni itaque, tempora error dolorem esse corrupti voluptatibus
-                soluta, fugit maiores voluptas harum reprehenderit ex hic ullam
-                dolorum aliquid nobis! Cumque! -->
               </div>
             </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="allEvents">
+            <a href="#"> View All Events</a>
           </div>
         </div>
       </div>
@@ -49,18 +50,21 @@ export default {
           title: "Coaching Session",
           description:
             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, autem eos esse voluptatibus quis numquam praesentium.",
+          href: "#",
         },
         {
           date: "28/07/2021 18:30",
           title: "Coaching Session",
           description:
             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, autem eos esse voluptatibus quis numquam praesentium.",
+          href: "#",
         },
         {
           date: "28/07/2021 18:30",
           title: "Coaching Session",
           description:
             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, autem eos esse voluptatibus quis numquam praesentium.",
+          href: "#",
         },
       ],
     };
@@ -69,7 +73,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../../scss/colors";
+@import "../../scss/mixin";
 
 .upcomingEvents {
   color: $edu-color-white;
@@ -101,6 +105,12 @@ export default {
               padding: 0 1em;
               width: (100% / 4);
             }
+          }
+        }
+        .allEvents {
+          padding: 2em 0;
+          a {
+            @include btn-yellow;
           }
         }
       }
