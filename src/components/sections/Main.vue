@@ -5,6 +5,9 @@
     </section>
     <section class="faculties">
       <Faculties />
+      <div class="separator">
+        <!-- <img src="images/svg-0.svg" alt="svg-0" /> -->
+      </div>
     </section>
     <section class="univerisyYear">
       <UniverityYear />
@@ -108,5 +111,28 @@ section {
 .methods,
 .fees {
   background-color: $edu-color-white;
+}
+
+main {
+  .faculties {
+    position: relative;
+    padding-bottom: 0;
+    overflow: hidden;
+    .separator {
+      position: relative;
+      bottom: -0.1em;
+      display: flex;
+      width: 100vw;
+      height: 8em;
+      background-image: url("/images/svg-0.svg");
+      background-size: cover;
+      // img {
+      //   width: 100%;
+      //   // height: 100%;
+      //   object-fit: contain;
+      //   obj-re
+      // }
+    }
+  }
 }
 </style>
