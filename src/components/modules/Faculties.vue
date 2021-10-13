@@ -18,86 +18,22 @@
         <div class="col">
           <div class="menu-cards">
             <ul class="row">
-              <li class="col">
-                <div class="card">
+              <li
+                v-for="(menuFacultie, index) in menuFaculties"
+                :key="index"
+                class="col"
+                @click="setThisFacultie(index)"
+              >
+                <div class="card" :class="{ active: menuFacultie.active }">
                   <div class="content">
                     <div class="image">
-                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
+                      <img
+                        :src="`images/${menuFacultie.src}`"
+                        alt="menuFacultie.src"
+                      />
                     </div>
                     <div class="title">
-                      <h6>Lorem Ipsum</h6>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col">
-                <div class="card active">
-                  <div class="content">
-                    <div class="image">
-                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
-                    </div>
-                    <div class="title">
-                      <h6>Lorem Ipsum</h6>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col">
-                <div class="card">
-                  <div class="content">
-                    <div class="image">
-                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
-                    </div>
-                    <div class="title">
-                      <h6>Lorem Ipsum</h6>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col">
-                <div class="card">
-                  <div class="content">
-                    <div class="image">
-                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
-                    </div>
-                    <div class="title">
-                      <h6>Lorem Ipsum</h6>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col">
-                <div class="card">
-                  <div class="content">
-                    <div class="image">
-                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
-                    </div>
-                    <div class="title">
-                      <h6>Lorem Ipsum</h6>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col">
-                <div class="card">
-                  <div class="content">
-                    <div class="image">
-                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
-                    </div>
-                    <div class="title">
-                      <h6>Lorem Ipsum</h6>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="col">
-                <div class="card">
-                  <div class="content">
-                    <div class="image">
-                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
-                    </div>
-                    <div class="title">
-                      <h6>Lorem Ipsum</h6>
+                      <h6>menuFacultie.title</h6>
                     </div>
                   </div>
                 </div>
@@ -122,6 +58,23 @@ export default {
   },
   data() {
     return {
+      menuFaculties: [
+        {
+          src: "Gavel-v2.png",
+          title: "Lorem Ipsum",
+          active: true,
+        },
+        {
+          src: "Gavel-v2.png",
+          title: "Lorem Ipsum",
+          active: false,
+        },
+        {
+          src: "Gavel-v2.png",
+          title: "Lorem Ipsum",
+          active: false,
+        },
+      ],
       coursesSection: {
         imageToRight: false,
         content: {
@@ -139,6 +92,14 @@ export default {
         banner: "Graduation-Illustration.png",
       },
     };
+  },
+  methods: {
+    setThisFacultie(index) {
+      this.menuFaculties.forEach((menuFacultie, i) => {
+        if (index == i) menuFacultie.active = true;
+        else menuFacultie.active = false;
+      });
+    },
   },
 };
 </script>
@@ -174,11 +135,12 @@ export default {
             list-style: none;
             li {
               // border: 0.2em solid green;
+              cursor: pointer;
               width: (100% / 7);
               .card {
                 position: relative;
                 // border: 0.2em solid orange;
-                box-shadow: 0 0.5em 1em lightgray;
+                box-shadow: 0 0.1em 0.1em lightgray;
                 width: 100%;
                 &::after {
                   display: block;
