@@ -123,18 +123,18 @@ export default {
                 &.right {
                   justify-content: flex-end;
                   .col:last-child {
-                    margin-right: 6em;
+                    margin-right: 96px;
                   }
                   .col:first-child {
-                    margin-right: 3em;
+                    margin-right: 48px;
                   }
                 }
                 &.left {
                   .col:first-child {
-                    margin-left: 1em;
+                    margin-left: 16px;
                   }
                   .col:last-child {
-                    margin-left: 4em;
+                    margin-left: 64px;
                   }
                 }
                 > .col {

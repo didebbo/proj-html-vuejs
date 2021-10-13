@@ -12,6 +12,9 @@
     <section class="subscribe">
       <Subscribe />
     </section>
+    <section class="upcomingEvents">
+      <UpcomingEvents />
+    </section>
   </main>
 </template>
 
@@ -20,6 +23,7 @@ import TwoColumns from "../modules/TwoColumns.vue";
 import Faculties from "../modules/Faculties.vue";
 import Subscribe from "../modules/Subscribe.vue";
 import UniverityYear from "../modules/UniverityYear.vue";
+import UpcomingEvents from "../modules/UpcomingEvents.vue";
 
 export default {
   name: "Main",
@@ -28,6 +32,7 @@ export default {
     Faculties,
     Subscribe,
     UniverityYear,
+    UpcomingEvents,
   },
   data() {
     return {
