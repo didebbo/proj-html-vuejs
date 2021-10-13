@@ -1,0 +1,65 @@
+<template>
+  <div class="card">
+    <div class="row">
+      <div class="col">
+        <div class="title">
+          <h4>
+            {{ data.title }}
+          </h4>
+        </div>
+      </div>
+      <div class="col">
+        <div class="date">
+          <i class="far fa-calendar-alt"></i>
+          <small>
+            {{ data.date }}
+          </small>
+        </div>
+      </div>
+      <div class="col">
+        <div class="description">
+          {{ data.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Card",
+  props: ["data"],
+};
+</script>
+
+<style scoped lang="scss">
+@import "../../scss/mixin";
+.card {
+  background-color: $edu-color-white;
+  color: $edu-text-color;
+  padding: 2em;
+  border-radius: 0.5em;
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .col {
+      padding: 0.2em 0;
+      .date,
+      .description {
+        opacity: 0.6;
+      }
+      .date {
+        font-size: 0.8em;
+        > * {
+          padding: 0 0.1em;
+        }
+      }
+      .description {
+        font-size: 0.6em;
+        line-height: 1.5em;
+      }
+    }
+  }
+}
+</style>

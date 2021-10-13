@@ -110,6 +110,7 @@ export default {
         }
         > .title {
           background-color: $edu-color-brown;
+          font-size: 1.2em;
         }
         .timeline {
           > .row {

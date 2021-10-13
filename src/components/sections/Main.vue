@@ -9,11 +9,11 @@
     <section class="univerisyYear">
       <UniverityYear />
     </section>
-    <section class="subscribe">
-      <Subscribe />
-    </section>
     <section class="upcomingEvents">
       <UpcomingEvents />
+    </section>
+    <section class="subscribe">
+      <Subscribe />
     </section>
   </main>
 </template>
