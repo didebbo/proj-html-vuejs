@@ -1,13 +1,15 @@
 <template>
   <div class="faculties">
-    <div class="container">
-      <div class="row">
-        <div class="col">
+    <div class="row">
+      <div class="col">
+        <div class="container">
           <div class="title">
             <h2>Faculties avaiable at EduPrime</h2>
           </div>
         </div>
-        <div class="col">
+      </div>
+      <div class="col">
+        <div class="container">
           <div class="description">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
             accusantium rerum nisi omnis deserunt! Sint inventore veniam qui sit
@@ -15,39 +17,41 @@
             ad.
           </div>
         </div>
-        <div class="col">
-          <div class="menu-cards">
-            <ul class="row">
-              <li class="col">
-                <div class="card"></div>
-              </li>
-              <li
-                v-for="(menuFacultie, index) in menuFaculties"
-                :key="index"
-                class="col"
-                @click="setThisFacultie(index)"
-              >
-                <div class="card" :class="isCurrentFacultie(index)">
-                  <div class="content">
-                    <div class="image">
-                      <img
-                        :src="`images/${menuFacultie.src}`"
-                        alt="menuFacultie.src"
-                      />
-                    </div>
-                    <div class="title">
-                      <h6>{{ menuFacultie.title }}</h6>
-                    </div>
+      </div>
+      <div class="col">
+        <div class="menu-cards">
+          <ul class="row">
+            <li class="col">
+              <div class="card"></div>
+            </li>
+            <li
+              v-for="(menuFacultie, index) in menuFaculties"
+              :key="index"
+              class="col"
+              @click="setThisFacultie(index)"
+            >
+              <div class="card" :class="isCurrentFacultie(index)">
+                <div class="content">
+                  <div class="image">
+                    <img
+                      :src="`images/${menuFacultie.src}`"
+                      alt="menuFacultie.src"
+                    />
+                  </div>
+                  <div class="title">
+                    <h6>{{ menuFacultie.title }}</h6>
                   </div>
                 </div>
-              </li>
-              <li class="col">
-                <div class="card"></div>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+            <li class="col">
+              <div class="card"></div>
+            </li>
+          </ul>
         </div>
-        <div class="col">
+      </div>
+      <div class="col">
+        <div class="container">
           <TwoColumns :data="currentFacultieSection" />
         </div>
       </div>
@@ -171,84 +175,86 @@ export default {
 @import "../../scss/colors";
 
 .faculties {
-  .container {
-    > .row {
-      display: flex;
-      flex-direction: column;
-      // align-items: center;
-      // border: 0.2em solid red;
+  > .row {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // border: 0.2em solid red;
 
-      > .col {
-        // border: 0.2em solid green;
-        padding: 2em 0;
+    > .col {
+      // border: 0.2em solid green;
+      padding: 2em 0;
+      // display: flex;
+      // justify-content: center;
+      .description {
+        text-align: center;
+        font-size: 0.8em;
+        max-width: 50%;
+      }
+      .container {
         display: flex;
         justify-content: center;
-        .description {
-          text-align: center;
-          font-size: 0.8em;
-          max-width: 50%;
-        }
-        .menu-cards {
-          // border: 0.2em solid blue;
-          width: 100%;
-          ul {
-            // border: 0.2em solid red;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            list-style: none;
-            li {
-              // border: 0.2em solid green;
-              cursor: pointer;
-              width: (100% / 7);
-              .card {
-                position: relative;
-                // border: 0.2em solid orange;
-                box-shadow: 0 0.1em 0.1em lightgray;
-                width: 100%;
-                &::after {
-                  display: block;
-                  content: "";
-                  padding-top: 100%;
-                  // width: 0.1em;
-                  // background-color: red;
-                }
-                &.active {
-                  background-color: $edu-color-red;
-                  box-shadow: none;
-                  img {
-                    filter: brightness(200%);
-                  }
-                  .content {
-                    .title {
-                      color: $edu-color-white;
-                    }
-                  }
+      }
+      .menu-cards {
+        // border: 0.2em solid blue;
+        width: 100%;
+        ul {
+          // border: 0.2em solid red;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          list-style: none;
+          li {
+            // border: 0.2em solid green;
+            cursor: pointer;
+            width: (100% / 7);
+            .card {
+              position: relative;
+              // border: 0.2em solid orange;
+              box-shadow: 0 0.1em 0.1em lightgray;
+              width: 100%;
+              &::after {
+                display: block;
+                content: "";
+                padding-top: 100%;
+                // width: 0.1em;
+                // background-color: red;
+              }
+              &.active {
+                background-color: $edu-color-red;
+                box-shadow: none;
+                img {
+                  filter: brightness(200%);
                 }
                 .content {
-                  position: absolute;
-                  // border: 0.2em solid yellow;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  justify-content: center;
-                  .image {
-                    width: 50%;
-                    height: 50%;
-                    img {
-                      width: 100%;
-                      height: 100%;
-                      object-fit: contain;
-                    }
-                  }
                   .title {
-                    margin-top: 0.5em;
-                    color: $edu-color-red;
+                    color: $edu-color-white;
                   }
+                }
+              }
+              .content {
+                position: absolute;
+                // border: 0.2em solid yellow;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .image {
+                  width: 50%;
+                  height: 50%;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+                .title {
+                  margin-top: 0.5em;
+                  color: $edu-color-red;
                 }
               }
             }
