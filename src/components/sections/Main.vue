@@ -6,6 +6,9 @@
     <section class="faculties">
       <Faculties />
     </section>
+    <section class="univerisyYear">
+      <UniverityYear />
+    </section>
     <section class="subscribe">
       <Subscribe />
     </section>
@@ -16,6 +19,7 @@
 import TwoColumns from "../modules/TwoColumns.vue";
 import Faculties from "../modules/Faculties.vue";
 import Subscribe from "../modules/Subscribe.vue";
+import UniverityYear from "../modules/UniverityYear.vue";
 
 export default {
   name: "Main",
@@ -23,6 +27,7 @@ export default {
     TwoColumns,
     Faculties,
     Subscribe,
+    UniverityYear,
   },
   data() {
     return {
