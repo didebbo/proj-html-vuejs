@@ -1,7 +1,7 @@
 <template>
   <div class="content">
-    <div class="top-icon">
-      <img src="images/Books-icon.png" alt="Books-icon" />
+    <div v-if="content.topIcon" class="top-icon">
+      <img :src="`images/${content.topIcon}`" :alt="content.topIcon" />
     </div>
     <div class="title">
       <h2>

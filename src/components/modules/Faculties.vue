@@ -42,8 +42,71 @@
                   </div>
                 </div>
               </li>
+              <li class="col">
+                <div class="card">
+                  <div class="content">
+                    <div class="image">
+                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
+                    </div>
+                    <div class="title">
+                      <h6>Lorem Ipsum</h6>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col">
+                <div class="card">
+                  <div class="content">
+                    <div class="image">
+                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
+                    </div>
+                    <div class="title">
+                      <h6>Lorem Ipsum</h6>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col">
+                <div class="card">
+                  <div class="content">
+                    <div class="image">
+                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
+                    </div>
+                    <div class="title">
+                      <h6>Lorem Ipsum</h6>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col">
+                <div class="card">
+                  <div class="content">
+                    <div class="image">
+                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
+                    </div>
+                    <div class="title">
+                      <h6>Lorem Ipsum</h6>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col">
+                <div class="card">
+                  <div class="content">
+                    <div class="image">
+                      <img src="images/Gavel-v2.png" alt="Gavel-v2" />
+                    </div>
+                    <div class="title">
+                      <h6>Lorem Ipsum</h6>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
+        </div>
+        <div class="col">
+          <TwoColumns :data="coursesSection" />
         </div>
       </div>
     </div>
@@ -51,8 +114,32 @@
 </template>
 
 <script>
+import TwoColumns from "./TwoColumns.vue";
 export default {
   name: "Faculties",
+  components: {
+    TwoColumns,
+  },
+  data() {
+    return {
+      coursesSection: {
+        imageToRight: false,
+        content: {
+          topIcon: "Books-icon.png",
+          title: `Thousands of courses for any type of student`,
+          description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+        molestiae itaque deserunt rem velit magni, animi inventore ad rerum,
+        repellat perferendis. Earum hic nam saepe nulla, fuga officia iste
+        laborum.`,
+          btn: {
+            label: `Browse all courses`,
+            href: `#`,
+          },
+        },
+        banner: "Graduation-Illustration.png",
+      },
+    };
+  },
 };
 </script>
 
@@ -69,12 +156,9 @@ export default {
 
       > .col {
         // border: 0.2em solid green;
-        padding: 1em 0;
+        padding: 2em 0;
         display: flex;
         justify-content: center;
-        > * {
-          // border: 0.2em solid blue;
-        }
         .description {
           text-align: center;
           font-size: 0.8em;
