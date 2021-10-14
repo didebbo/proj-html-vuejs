@@ -54,12 +54,18 @@ nav {
           text-decoration: none;
           color: $edu-color-white;
           font-size: 1.1em;
+          transition: 0.2s;
           i {
             padding: 0 0.4em;
             font-size: 0.8em;
           }
           &.active {
             color: $edu-color-yellow;
+          }
+          &:hover:not(.active) {
+            transform: scale(1.1);
+            color: $edu-color-yellow;
+            filter: brightness(1.2);
           }
         }
       }
