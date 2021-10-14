@@ -25,13 +25,13 @@ export default {
   background-color: $edu-color-yellow;
   z-index: 5;
   bottom: 20px;
-  padding: 0.5em 1em 0.5em 0.5em;
-  border-radius: 0 0.5em 0.5em 0;
+  padding: 0.5em 0.5em 0.5em 1em;
+  border-radius: 0.5em 0 0 0.5em;
   color: $edu-color-white;
-  left: -2em;
+  right: -1.8em;
   transition: 0.4s;
   &:hover {
-    left: 0px;
+    right: 0px;
   }
   a {
     color: $edu-color-white;
@@ -39,8 +39,8 @@ export default {
   }
   .toggle {
     position: absolute;
-    right: -0.5em;
-    padding-left: 0.5em;
+    left: -0.5em;
+    padding-right: 0.5em;
     cursor: pointer;
     text-shadow: 0.2em 0 0.4em rgba(0, 0, 0, 0.4);
   }
