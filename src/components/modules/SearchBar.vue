@@ -42,6 +42,10 @@ export default {
       background-color: $edu-color-yellow;
       color: $edu-color-white;
       cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        filter: brightness(1.1);
+      }
     }
   }
 }
