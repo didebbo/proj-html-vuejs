@@ -18,7 +18,6 @@
         </div>
       </div>
     </div>
-    <!-- TODO Social -->
   </div>
 </template>
 
@@ -51,12 +50,19 @@ export default {
         a {
           color: $edu-color-white;
           text-decoration: none;
+
           .icon {
             position: relative;
             border: 0.1em solid $edu-color-yellow;
             border-radius: 50%;
             width: 2.5em;
             height: 2.5em;
+            transition: 0.2s;
+            &:hover {
+              background-color: $edu-color-yellow;
+              color: $edu-color-red;
+              transform: rotate(360deg);
+            }
 
             i {
               position: absolute;
