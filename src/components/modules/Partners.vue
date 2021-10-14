@@ -57,9 +57,14 @@ export default {
             width: 100%;
             height: 100%;
             a {
+              display: block;
+              width: 100%;
+              height: 100%;
               opacity: 0.4;
+              transition: 0.2s;
               &:hover {
                 opacity: 0.8;
+                transform: scale(1.1);
               }
               img {
                 width: 100%;
