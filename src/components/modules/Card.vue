@@ -53,6 +53,11 @@ export default {
     align-items: center;
     .col {
       padding: 0.2em 0;
+      // border: 0.2em solid blue;
+      .title {
+        // border: 0.2em solid red;
+        text-align: center;
+      }
       .date,
       .description {
         opacity: 0.6;

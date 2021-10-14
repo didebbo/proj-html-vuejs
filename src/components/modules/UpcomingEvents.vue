@@ -101,6 +101,7 @@ export default {
             // border: 0.2em solid red;
             justify-content: center;
             > .col {
+              // display: flex;
               // border: 0.2em solid blue;
               padding: 0 1em;
               width: (100% / 4);
