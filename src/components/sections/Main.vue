@@ -24,6 +24,7 @@
       <Subscribe />
     </section>
     <section class="partners">
+      <Partners :data="partners" />
       <div class="separator"></div>
     </section>
   </main>
@@ -35,6 +36,7 @@ import Faculties from "../modules/Faculties.vue";
 import Subscribe from "../modules/Subscribe.vue";
 import UniverityYear from "../modules/UniverityYear.vue";
 import UpcomingEvents from "../modules/UpcomingEvents.vue";
+import Partners from "../modules/Partners.vue";
 
 export default {
   name: "Main",
@@ -44,6 +46,7 @@ export default {
     Subscribe,
     UniverityYear,
     UpcomingEvents,
+    Partners,
   },
   data() {
     return {
@@ -97,6 +100,40 @@ export default {
         },
         banner: "Exam-Illustration.png",
       },
+      partners: [
+        {
+          href: "#",
+          src: "partner-1.png",
+        },
+        {
+          href: "#",
+          src: "partner-2.png",
+        },
+        {
+          href: "#",
+          src: "partner-3.png",
+        },
+        {
+          href: "#",
+          src: "partner-4.png",
+        },
+        {
+          href: "#",
+          src: "partner-5.png",
+        },
+        {
+          href: "#",
+          src: "partner-6.png",
+        },
+        {
+          href: "#",
+          src: "partner-7.png",
+        },
+        {
+          href: "#",
+          src: "partner-8.png",
+        },
+      ],
     };
   },
 };
