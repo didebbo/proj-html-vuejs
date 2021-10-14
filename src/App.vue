@@ -4,6 +4,7 @@
     <LeftMenu />
     <Main />
     <Footer />
+    <BackToTop />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from "./components/sections/Header.vue";
 import Main from "./components/sections/Main.vue";
 import Footer from "./components/sections/Footer.vue";
 import LeftMenu from "./components/modules/LeftMenu.vue";
+import BackToTop from "./components/modules/BackToTop.vue";
 
 export default {
   name: "App",
@@ -20,6 +22,7 @@ export default {
     Main,
     Footer,
     LeftMenu,
+    BackToTop,
   },
 };
 </script>
@@ -33,6 +36,10 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
