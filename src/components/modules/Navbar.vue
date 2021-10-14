@@ -1,7 +1,9 @@
 <template>
   <nav>
     <div class="logo">
-      <img src="images/theme_eduprime_logo.png" alt="EduPrime Logo" />
+      <a href="#">
+        <img src="images/theme_eduprime_logo.png" alt="EduPrime Logo" />
+      </a>
     </div>
     <div class="items">
       <ul class="row">
@@ -36,8 +38,15 @@ nav {
   align-items: center;
   padding: 1em 1.5em;
   .logo {
-    img {
-      height: 2.5em;
+    a {
+      display: inline-block;
+      transition: 0.2s;
+      img {
+        height: 2.5em;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
   .items {
