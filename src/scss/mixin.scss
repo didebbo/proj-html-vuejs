@@ -10,6 +10,7 @@
     font-weight: bold;
     text-decoration: none;
     transition: 0.2s;
+    white-space: nowrap;
     &:hover {
       filter: brightness(1.1);
       transform: scale(1.1);

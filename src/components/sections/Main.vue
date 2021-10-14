@@ -13,8 +13,11 @@
     <section class="upcomingEvents">
       <UpcomingEvents />
     </section>
-    <section class="methods">
+    <section class="latestCourses">
       <div class="separator"></div>
+      <LatestCourses :data="latestCourses" />
+    </section>
+    <section class="methods">
       <TwoColumns :data="methods" />
     </section>
     <section class="fees">
@@ -37,6 +40,7 @@ import Subscribe from "../modules/Subscribe.vue";
 import UniverityYear from "../modules/UniverityYear.vue";
 import UpcomingEvents from "../modules/UpcomingEvents.vue";
 import Partners from "../modules/Partners.vue";
+import LatestCourses from "../modules/LatestCourses.vue";
 
 export default {
   name: "Main",
@@ -47,6 +51,7 @@ export default {
     UniverityYear,
     UpcomingEvents,
     Partners,
+    LatestCourses,
   },
   data() {
     return {
@@ -66,6 +71,36 @@ export default {
         },
         banner: "Graduation-Illustration.png",
       },
+      latestCourses: [
+        {
+          topIcon: "Decisions-icon.png",
+          title: "Make Better Decisions",
+          teacher: "Jam Colins",
+          price: "$21.00",
+          href: "#",
+        },
+        {
+          topIcon: "Speaker-icon.png",
+          title: "How to be a speaker",
+          teacher: "Jam Colins",
+          price: "Free",
+          href: "#",
+        },
+        {
+          topIcon: "Network-icon.png",
+          title: "Network Introduction",
+          teacher: "Jam Colins",
+          price: "Free",
+          href: "#",
+        },
+        {
+          topIcon: "Brand-icon.png",
+          title: "Brand Management",
+          teacher: "Jam Colins",
+          price: "Free",
+          href: "#",
+        },
+      ],
       methods: {
         imageToRight: true,
         content: {
@@ -147,6 +182,7 @@ section {
 }
 .courses,
 .faculties,
+.latestCourses,
 .methods,
 .fees,
 .partners {
@@ -175,7 +211,7 @@ main {
       background-position: bottom;
     }
   }
-  .methods {
+  .latestCourses {
     position: relative;
     padding-top: 0;
     overflow: hidden;
