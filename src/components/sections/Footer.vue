@@ -145,13 +145,14 @@ export default {
 
 <style scoped lang="scss">
 @import "../../scss/colors";
+@import "../../scss/breakpoints";
 
 footer {
   padding: 3em 0;
   background-color: $edu-color-red;
   color: $edu-color-white;
   .container {
-    .row {
+    > .row {
       display: flex;
       // flex-wrap: wrap;
       justify-content: center;
@@ -159,7 +160,7 @@ footer {
       > .col {
         display: flex;
         justify-content: center;
-        // border: 0.1em solid blue;
+        // border: 0.1em solid red;
         &.social {
           width: 30%;
         }
@@ -169,9 +170,6 @@ footer {
         }
         &.category {
           width: 30%;
-        }
-        > * {
-          // border: 0.1em solid green;
         }
       }
     }
