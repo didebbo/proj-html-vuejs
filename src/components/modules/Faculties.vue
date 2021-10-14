@@ -59,6 +59,7 @@
   </div>
 </template>
 
+
 <script>
 import TwoColumns from "./TwoColumns.vue";
 export default {
@@ -68,16 +69,20 @@ export default {
   },
   data() {
     return {
-      currentFacultie: 0,
+      currentFacultie: 1,
       menuFaculties: [
         {
           src: "Gavel-v2.png",
           title: "Low Faculty",
           facultieSection: {
+            imageToRight: false,
             content: {
               title: "Low Faculty",
+              description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis blanditiis hic minus aperiam culpa at consectetur praesentium debitis aspernatur recusandae laudantium quae fugit vitae, velit voluptatum obcaecati ad placeat amet.`,
               btn: {
+                label: `Read More`,
                 href: `#`,
+                bgColor: "#e56768",
               },
             },
             banner: "Gavel-Illustration-e1556884768193.png",
@@ -87,10 +92,14 @@ export default {
           src: "Coins-tabs-v2.png",
           title: "Economy",
           facultieSection: {
+            imageToRight: true,
             content: {
               title: "Economy",
+              description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur fuga suscipit! Nulla veritatis, optio pariatur atque ut similique, est vero quis totam provident, hic fugiat quibusdam odio vel aut.`,
               btn: {
+                label: `Read More`,
                 href: `#`,
+                bgColor: "#e56768",
               },
             },
             banner: "Economy.png",
@@ -100,10 +109,14 @@ export default {
           src: "Medicine-tabs-v2.png",
           title: "Medicine",
           facultieSection: {
+            imageToRight: false,
             content: {
               title: "Medicine",
+              description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eaque voluptates, aspernatur ab sint fugit dolores, natus doloribus illum voluptate earum, hic commodi. Consectetur, illum facilis sapiente voluptas accusantium expedita?`,
               btn: {
+                label: `Read More`,
                 href: `#`,
+                bgColor: "#e56768",
               },
             },
             banner: "Medicine.png",
@@ -113,10 +126,14 @@ export default {
           src: "Computer-tabs-v2.png",
           title: "Computer Science",
           facultieSection: {
+            imageToRight: true,
             content: {
               title: "Computer Science",
+              description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas id incidunt soluta, quibusdam, est aliquid et quis ipsa eum cupiditate ratione nam delectus dolores hic, corporis amet fugit vel voluptate.`,
               btn: {
+                label: `Read More`,
                 href: `#`,
+                bgColor: "#e56768",
               },
             },
             banner: "Computer-Science.png",
@@ -126,32 +143,21 @@ export default {
           src: "Palette-tabs-v2.png",
           title: "Graphic Design",
           facultieSection: {
+            imageToRight: false,
             content: {
               title: "Graphic Design",
+              description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aut minima quas, in totam repudiandae porro praesentium nam laborum molestias, vel incidunt perferendis vitae ipsa quam dolor recusandae saepe harum?`,
               btn: {
+                label: `Read More`,
                 href: `#`,
+                bgColor: "#e56768",
               },
             },
             banner: "Graphic-Design.png",
           },
         },
       ],
-      currentFacultieSection: {
-        imageToRight: false,
-        content: {
-          title: "",
-          description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-        molestiae itaque deserunt rem velit magni, animi inventore ad rerum,
-        repellat perferendis. Earum hic nam saepe nulla, fuga officia iste
-        laborum.`,
-          btn: {
-            label: `Read More`,
-            href: `#`,
-            bgColor: "#e56768",
-          },
-        },
-        banner: "",
-      },
+      currentFacultieSection: null,
     };
   },
   methods: {
@@ -160,10 +166,7 @@ export default {
     },
     isCurrentFacultie(index) {
       if (index == this.currentFacultie) {
-        this.currentFacultieSection.content.title =
-          this.menuFaculties[index].facultieSection.content.title;
-        this.currentFacultieSection.banner =
-          this.menuFaculties[index].facultieSection.banner;
+        this.currentFacultieSection = this.menuFaculties[index].facultieSection;
         return "active";
       }
     },
