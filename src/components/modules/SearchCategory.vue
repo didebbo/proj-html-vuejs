@@ -1,14 +1,6 @@
 <template>
   <div class="searchCategory">
     <SearchBar :data="searchBar" />
-    <!-- <div class="searchBar">
-      <form action="#">
-        <input type="text" placeholder="Search..." />
-        <button type="submit" @click.prevent>
-          <i class="fas fa-search"></i>
-        </button>
-      </form>
-    </div> -->
     <div class="categories">
       <div class="title">
         <h4>Search Categories</h4>
@@ -40,6 +32,7 @@ export default {
   data() {
     return {
       searchBar: {
+        placeholder: "Search...",
         btnIcon: {
           prefix: "fas",
           suffix: "fa-search",

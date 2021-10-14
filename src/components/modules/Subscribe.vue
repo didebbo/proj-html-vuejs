@@ -26,6 +26,7 @@ export default {
   data() {
     return {
       searchBar: {
+        placeholder: "Subscribe...",
         btnIcon: {
           prefix: "fas",
           suffix: "fa-paper-plane",

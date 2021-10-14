@@ -1,7 +1,7 @@
 <template>
   <div class="searchBar">
     <form action="#">
-      <input type="text" placeholder="Search..." />
+      <input type="text" :placeholder="data.placeholder" />
       <button type="submit" @click.prevent>
         <i :class="`${data.btnIcon.prefix} ${data.btnIcon.suffix}`"></i>
       </button>
